@@ -1,0 +1,10 @@
+sudo ifconfig eth0 192.168.101.8/24
+sudo route add default gw 192.168.101.1
+
+sudo vim /etc/resolv.conf     # nameserver 114.114.114.114
+# check wlan info
+iwconfig
+# check AP that around
+iwlist wlan0 scan
+# connect into wlan
+iwconfig wlan0 ESSID "linkname" KEY "password" open
